@@ -1,0 +1,53 @@
+.sidebar {
+  position: fixed;
+  background-color: #191718;
+  width: 150px;
+  height: 100vh;
+}
+
+.sidebar > li {
+  padding: 14px 0 11px 16px;
+  border-bottom: 1px solid #5c5c5c;
+}
+
+.sidebar > li:hover {
+  background-color: #5c5c5c;
+  cursor: pointer;
+}
+
+.sidebar > li:hover > a {
+  color: white;
+}
+
+.sidebar > li > a {
+  color: #aaa;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 360px;
+    position: relative;
+    left: -360px;
+    transition: transform 0.5s;
+  }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transform: translateX(100%);
+  }
+  .menu-btn button {
+    border: none;
+    background-color: #aaa;
+    color: black;
+    padding: 6px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .sidebar.active {
+    transform: translateX(360px);
+  }
+}

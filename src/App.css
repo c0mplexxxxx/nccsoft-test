@@ -1,0 +1,38 @@
+.layout {
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-template-areas: 
+  'sidebar content'
+  'sidebar footer';
+  height: 100vh;
+}
+
+.sidebar-wrapper {
+  grid-area: sidebar;
+}
+
+.content-wrapper {
+  grid-area: content;
+}
+
+.footer-wrapper {
+  margin-top: 40px;
+  grid-area: footer;
+  align-self: flex-end;
+  padding: 30px 0;
+  border-top: 1px solid #DEDEDE;
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar-wrapper {
+    position: fixed;
+  }
+  .footer-wrapper {
+    width: 100%;
+  }
+}
+
